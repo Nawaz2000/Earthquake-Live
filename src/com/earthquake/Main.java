@@ -16,20 +16,6 @@ import com.earthquake.pojos.QuakeEntry;
 public class Main {
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-//		EarthQuakeParser xp = new EarthQuakeParser();
-		// String source = "data/2.5_week.atom";
-		// String source =
-		// "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-//		String source = "data/nov20quakedatasmall.atom";
-//		ArrayList<QuakeEntry> list = xp.read(source);
-//		Collections.sort(list);
-//		for (QuakeEntry loc : list) {
-//			System.out.println(loc);
-//		}
-//		System.out.println("# quakes = " + list.size());
-//		EarthQuakeClient2 obj = new EarthQuakeClient2();
-//		obj.testMatchAllFilters2();
-//		obj.quakesWithFilter();
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter your choice: ");
@@ -39,18 +25,42 @@ public class Main {
 		String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.atom";
 		ArrayList<QuakeEntry> quakeData = parser.read(source);
 
+		EarthQuakeClient2 client = new EarthQuakeClient2();
+
 		while (!choice.equalsIgnoreCase("exit")) {
 			switch (choice) {
 			case "magnitude-filter":
 				System.out.println("Enter lower-bound magnitude: ");
-				String min = scan.nextLine();
+				String minMag = scan.nextLine();
 				System.out.println("Enter upper-bound magnitude: ");
-				String max = scan.nextLine();
+				String maxMag = scan.nextLine();
 
-				EarthQuakeClient2 client = new EarthQuakeClient2();
-				client.magResponse(Integer.parseInt(min), Integer.parseInt(max), quakeData);
+				client.magResponse(Integer.parseInt(minMag), Integer.parseInt(maxMag), quakeData);
 				break;
+			case "depth-filter":
+				System.out.println("Enter lower-bound depth: ");
+				String minDepth = scan.nextLine();
+				System.out.println("Enter upper-bound depth: ");
+				String maxDepth = scan.nextLine();
 
+				client.depthResponse(Integer.parseInt(minDepth), Integer.parseInt(maxDepth), quakeData);
+				break;
+			case "location-filter":
+				System.out.println("Enter latitude: ");
+				String latitude = scan.nextLine();
+				System.out.println("Enter longitude: ");
+				String longitude = scan.nextLine();
+				System.out.println("Enter max distance in meters from your location: ");
+				String maxDistance = scan.nextLine();
+
+				client.locationResponse(Double.parseDouble(latitude), Double.parseDouble(longitude), quakeData,
+						Integer.parseInt(maxDistance));
+				break;
+			case "minMag-filter":
+				System.out.println("Enter min magnitude: ");
+				String minMagnitude = scan.nextLine();
+
+				client.minMagResponse(Double.parseDouble(minMagnitude), quakeData);
 			}
 
 			System.out.println("Enter your choice: ");

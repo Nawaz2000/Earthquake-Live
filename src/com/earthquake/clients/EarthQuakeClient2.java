@@ -2,12 +2,15 @@ package com.earthquake.clients;
 
 import java.util.*;
 
+import com.earthquake.comparators.DepthComparator;
+import com.earthquake.comparators.DistanceComparator;
 import com.earthquake.comparators.MagnitudeComparator;
 import com.earthquake.filters.DepthFilter;
 import com.earthquake.filters.DistanceFilter;
 import com.earthquake.filters.Filter;
 import com.earthquake.filters.MagnitudeFilter;
 import com.earthquake.filters.MatchAllFilter;
+import com.earthquake.filters.MinMagFilter;
 import com.earthquake.filters.PhraseFilter;
 import com.earthquake.location.Location;
 import com.earthquake.parser.EarthQuakeParser;
@@ -136,6 +139,37 @@ public class EarthQuakeClient2 {
 	public void magResponse(int min, int max, ArrayList<QuakeEntry> quakeData) {
 		Filter mf = new MagnitudeFilter(min, max);
 		ArrayList<QuakeEntry> answers = filter(quakeData, mf);
+		System.out.println("Results found: " + answers.size());
+		Collections.sort(answers, new MagnitudeComparator());
+
+		for (QuakeEntry qe : answers)
+			System.out.println(qe.toString());
+	}
+
+	public void depthResponse(int min, int max, ArrayList<QuakeEntry> quakeData) {
+		Filter df = new DepthFilter(min, max);
+		ArrayList<QuakeEntry> answers = filter(quakeData, df);
+		System.out.println("Results found: " + answers.size());
+		Collections.sort(answers, new DepthComparator());
+
+		for (QuakeEntry qe : answers)
+			System.out.println(qe.toString());
+	}
+
+	public void locationResponse(double latitude, double longitude, ArrayList<QuakeEntry> quakeData, int distance) {
+		Location currLocation = new Location(latitude, longitude);
+		Filter lf = new DistanceFilter(currLocation, distance);
+		ArrayList<QuakeEntry> answers = filter(quakeData, lf);
+		System.out.println("Results found: " + answers.size());
+		Collections.sort(answers, new DistanceComparator(currLocation));
+
+		for (QuakeEntry qe : answers)
+			System.out.println(qe.toString());
+	}
+
+	public void minMagResponse(double minMagnitude, ArrayList<QuakeEntry> quakeData) {
+		Filter mmf = new MinMagFilter(minMagnitude);
+		ArrayList<QuakeEntry> answers = filter(quakeData, mmf);
 		System.out.println("Results found: " + answers.size());
 		Collections.sort(answers, new MagnitudeComparator());
 
