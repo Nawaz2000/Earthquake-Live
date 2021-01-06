@@ -15,7 +15,17 @@ import com.earthquake.pojos.QuakeEntry;
 public class Main {
 
 	public static void help() {
-
+		System.out.printf("Choice Usage :-\n");
+		System.out.printf("$ help  # Opens the help menu\n");
+		System.out.printf(
+				"$ magnitude-filter  # generates a list of earthquakes based on the minimum and maximum magnitudes you enter\n");
+		System.out.printf(
+				"$ depth-filter  # generates a list of earthquakes based on the minimum and maximum depths you enter\n");
+		System.out.printf(
+				"$ location-filter  # generates a list of earthquakes close to your provided location bounded by the maximum distance that you provide\n");
+		System.out.printf(
+				"$ minMag-filter  # generates a list of earthquakes lower bounded by the minimum magnitude you enter\n");
+		System.out.println("$ exit  # Exit!\n");
 	}
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
@@ -35,12 +45,12 @@ public class Main {
 			switch (choice) {
 			case "magnitude-filter":
 				Double minMag = null, maxMag = null;
-				System.out.println("Enter lower-bound magnitude: ");
+				System.out.println("Enter min magnitude: ");
 				if (scan.hasNextDouble()) {
 					minMag = scan.nextDouble();
 					scan.nextLine();
 
-					System.out.println("Enter upper-bound magnitude: ");
+					System.out.println("Enter max magnitude: ");
 					if (scan.hasNextDouble()) {
 						maxMag = scan.nextDouble();
 						scan.nextLine();
