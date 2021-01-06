@@ -3,11 +3,8 @@ package com.earthquake;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.xml.sax.SAXException;
-
 import com.earthquake.clients.EarthQuakeClient;
 import com.earthquake.parser.EarthQuakeParser;
 import com.earthquake.pojos.QuakeEntry;
