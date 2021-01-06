@@ -97,7 +97,7 @@ public class Main {
 					latitude = scan.nextDouble();
 					scan.nextLine();
 
-					System.out.println("Enter upper-bound depth: ");
+					System.out.println("Enter longitude: ");
 					if (scan.hasNextDouble()) {
 						longitude = scan.nextDouble();
 						scan.nextLine();
