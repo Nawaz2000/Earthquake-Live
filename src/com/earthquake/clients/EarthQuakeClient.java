@@ -18,8 +18,8 @@ import com.earthquake.pojos.QuakeEntry;
 
 //import edu.duke.*;
 
-public class EarthQuakeClient2 {
-	public EarthQuakeClient2() {
+public class EarthQuakeClient {
+	public EarthQuakeClient() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -136,7 +136,7 @@ public class EarthQuakeClient2 {
 //		}
 //	}
 
-	public void magResponse(int min, int max, ArrayList<QuakeEntry> quakeData) {
+	public void magResponse(double min, double max, ArrayList<QuakeEntry> quakeData) {
 		Filter mf = new MagnitudeFilter(min, max);
 		ArrayList<QuakeEntry> answers = filter(quakeData, mf);
 		System.out.println("Results found: " + answers.size());
