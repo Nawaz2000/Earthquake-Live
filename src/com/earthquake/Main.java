@@ -12,6 +12,8 @@ import com.earthquake.pojos.QuakeEntry;
 public class Main {
 
 	public static void help() {
+		System.out.println(
+				"\n-----------------------------------------------------------WELCOME TO EARTHQUAKE LIVE-----------------------------------------------------------");
 		System.out.printf("Command Usages :-\n\n");
 		System.out.printf("$ help				# Opens the help menu\n");
 		System.out.printf(
@@ -28,19 +30,22 @@ public class Main {
 	public static void terms() {
 		System.out.println("Some terms related to earthquakes used in the program...\n");
 		System.out.println("@ Depth		# In seismology, the depth of focus or focal depth refers "
-				+ "to the depth \n		  at which an earthquake occurs. It is always negative. "
-				+ "For example, when \n		  asked by the program, setting \n\n		  Lower blound "
-				+ "depth = -15000 and Upper bound depth = 5000\n\n		  will display earthquakes "
+				+ "to the distance \n		  below the earth's surface at which an earthquake occurs. "
+				+ "It is always \n		  negative. "
+				+ "For example, when asked by the program, setting \n\n		  Lower blound "
+				+ "depth = -15000 and Upper bound depth = -5000\n\n		  will display earthquakes "
 				+ "which occured at a depth between 15km and 5km below \n		  the earth's surface. "
 				+ "When asked, the input values must be integers.");
 		System.out.println("\n\n@ Location	# Refers to any location in latitudes and longitudes.\n		  \""
 				+ "location-filter\" asks for your current or any other "
-				+ "location's coordinates\n		  i.e., latitude and longitude. When asked, "
+				+ "location's coordinates\n		  i.e., latitude and longitude \n\n		"
+				+ "  (Ex- 22.572 and 88.363, which "
+				+ "are the coordinates of Kolkata, India) \n\n		  When asked for, "
 				+ "the input values must be decimals.");
 		System.out.println("\n\n@ Magnitude	# Earthquake size is a quantitative measure of the "
 				+ "size of the earthquake at \n		  its source. The Magnitude "
 				+ "Scale measures the amount of seismic energy \n		  released "
-				+ "by an earthquake. When asked, the input values must be decimals.");
+				+ "by an earthquake. When asked, the input values must be decimals.\n");
 	}
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
