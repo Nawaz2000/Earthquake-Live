@@ -167,7 +167,7 @@ public class Main {
 				System.out.println("Invalid input! Please Enter commands from the usage...");
 			}
 
-			System.out.println("Enter your choice: ");
+			System.out.println("\n\nEnter your choice: ");
 			choice = scan.nextLine();
 		}
 		scan.close();
