@@ -44,7 +44,11 @@ $ clear                         # clears the screen
                           released by an earthquake. Enter the minimum and maximum magnitudes to get
                           list of earthquakes within that range. When asked, the input values must
                           be decimals.
-</pre>                          
+</pre>      
+
+# Example screenshots
+![Opening screen](https://github.com/Nawaz2000/Earthquake-Live/blob/master/Screenshots/Menu.png)
+
 # Version
 v1.3
 
