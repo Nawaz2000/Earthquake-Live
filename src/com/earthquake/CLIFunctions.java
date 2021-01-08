@@ -34,7 +34,7 @@ public class CLIFunctions {
 				+ "to the distance \n		  	  below the earth's surface at which an earthquake occurs. "
 				+ "It is always \n		  	  negative. "
 				+ "For example, when asked by the program, setting \n\n		  	  Lower blound "
-				+ "depth = -15 and Upper bound depth = -5\n\n		  	  will display earthquakes "
+				+ "depth = -15000 and Upper bound depth = -5000\n\n		  	  will display earthquakes "
 				+ "which occured at a depth between 15km and 5km below \n		  	  the earth's surface. "
 				+ "When asked, the input values must be integers.");
 		System.out.println(
