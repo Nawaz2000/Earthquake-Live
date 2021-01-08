@@ -47,7 +47,20 @@ $ clear                         # clears the screen
 </pre>      
 
 # Example screenshots
+Opening Screen
 ![Opening screen](https://github.com/Nawaz2000/Earthquake-Live/blob/master/Screenshots/Menu.png)
+
+Opening Screen 2
+![Opening screen](https://github.com/Nawaz2000/Earthquake-Live/blob/master/Screenshots/choice.png)
+
+Depth Filter
+![Opening screen](https://github.com/Nawaz2000/Earthquake-Live/blob/master/Screenshots/depth-filter.png)
+
+Location Filter
+![Opening screen](https://github.com/Nawaz2000/Earthquake-Live/blob/master/Screenshots/location-filter.png)
+
+Magnitude Filter
+![Opening screen](https://github.com/Nawaz2000/Earthquake-Live/blob/master/Screenshots/magnitude-filter.png)
 
 # Version
 v1.3
