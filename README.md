@@ -1,5 +1,5 @@
 # Earthquake-Live
-A Command Line (CLI) personal real-time earthquake reporter tool.
+A real-time Command Line (CLI) earthquake reporter tool.
 
 # Description
 Earthquake Live is a tool that reports real-time earthquakes based on your selected filter. It currently displays global earthquake data of last 24 hours. The various commands in the program helps helps you filter data based on different parameters.
