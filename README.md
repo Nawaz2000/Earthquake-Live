@@ -16,7 +16,7 @@ $ exit                          # Exit!
 $ clear                         # clears the screen  
 </pre>
 **Some documentations on the above commands used in the program...**
-
+<pre>
 @ depth-filter          # In seismology, the depth of focus or focal depth refers to the distance
                           below the earth's surface at which an earthquake occurs. It is always
                           negative. For example, when asked by the program, setting
@@ -44,7 +44,7 @@ $ clear                         # clears the screen
                           released by an earthquake. Enter the minimum and maximum magnitudes to get
                           list of earthquakes within that range. When asked, the input values must
                           be decimals.
-                          
+</pre>                          
 # Version
 v1.3
 
