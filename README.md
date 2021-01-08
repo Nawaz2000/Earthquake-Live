@@ -6,14 +6,14 @@ Earthquake Live is a tool that reports real-time earthquakes based on your selec
 
 **Command Usages :-**
 
-$ help                          # Opens the usage menu
-$ magnitude-filter              # generates a list of earthquakes based on the minimum and maximum magnitudes you enter.
-$ depth-filter                  # generates a list of earthquakes based on the minimum and maximum depths you enter.
-$ location-filter               # generates a list of earthquakes close to your provided location bounded by the maximum distance that you provide.
-$ minMag-filter                 # generates a list of earthquakes lower bounded by the minimum magnitude you enter.
-$ help-docs                     # opens up the documentation of some commands
-$ exit                          # Exit!
-$ clear                         # clears the screen
+$ help                          # Opens the usage menu  
+$ magnitude-filter              # generates a list of earthquakes based on the minimum and maximum magnitudes you enter.  
+$ depth-filter                  # generates a list of earthquakes based on the minimum and maximum depths you enter.  
+$ location-filter               # generates a list of earthquakes close to your provided location bounded by the maximum distance that you provide.  
+$ minMag-filter                 # generates a list of earthquakes lower bounded by the minimum magnitude you enter.  
+$ help-docs                     # opens up the documentation of some commands  
+$ exit                          # Exit!  
+$ clear                         # clears the screen  
 
 **Some documentations on the above commands used in the program...**
 
