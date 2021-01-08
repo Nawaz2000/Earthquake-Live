@@ -5,7 +5,7 @@ A real-time Command Line (CLI) earthquake reporter tool.
 Earthquake Live is a tool that reports real-time earthquakes based on your selected filter. It currently displays global earthquake data of last 24 hours. The various commands in the program helps helps you filter data based on different parameters.
 
 **Command Usages :-**
-
+<pre>
 $ help                          # Opens the usage menu  
 $ magnitude-filter              # generates a list of earthquakes based on the minimum and maximum magnitudes you enter.  
 $ depth-filter                  # generates a list of earthquakes based on the minimum and maximum depths you enter.  
@@ -14,7 +14,7 @@ $ minMag-filter                 # generates a list of earthquakes lower bounded 
 $ help-docs                     # opens up the documentation of some commands  
 $ exit                          # Exit!  
 $ clear                         # clears the screen  
-
+</pre>
 **Some documentations on the above commands used in the program...**
 
 @ depth-filter          # In seismology, the depth of focus or focal depth refers to the distance
