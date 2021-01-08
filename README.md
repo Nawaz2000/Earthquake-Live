@@ -1,17 +1,57 @@
-[![Nawaz's github stats](https://github-readme-stats.vercel.app/api?username=Nawaz2000)](https://github.com/anuraghazra/github-readme-stats)
-
 # Earthquake-Live
-A Command Line Application (CLI) personal real-time earthquake reporter tool.
+A Command Line (CLI) personal real-time earthquake reporter tool.
 
 # Description
-A CLI made using java. Just enter the commands to know the number of words in any text file. Also check their number of occurances.
+Earthquake Live is a tool that reports real-time earthquakes based on your selected filter. It currently displays global earthquake data of last 24 hours. The various commands in the program helps helps you filter data based on different parameters.
 
+**Command Usages :-**
+
+$ help                          # Opens the usage menu
+$ magnitude-filter              # generates a list of earthquakes based on the minimum and maximum magnitudes you enter.
+$ depth-filter                  # generates a list of earthquakes based on the minimum and maximum depths you enter.
+$ location-filter               # generates a list of earthquakes close to your provided location bounded by the maximum distance that you provide.
+$ minMag-filter                 # generates a list of earthquakes lower bounded by the minimum magnitude you enter.
+$ help-docs                     # opens up the documentation of some commands
+$ exit                          # Exit!
+$ clear                         # clears the screen
+
+**Some documentations on the above commands used in the program...**
+
+@ depth-filter          # In seismology, the depth of focus or focal depth refers to the distance
+                          below the earth's surface at which an earthquake occurs. It is always
+                          negative. For example, when asked by the program, setting
+
+                          Lower blound depth = -15000 and Upper bound depth = -5000
+
+                          will display earthquakes which occured at a depth between 15km and 5km below
+                          the earth's surface. When asked, the input values must be integers.
+
+
+@ location-filter       # Location- Refers to any location in latitudes and longitudes.
+                          "location-filter" asks for your current or any other location's coordinates
+                          i.e., latitude and longitude
+
+                          (Ex- 22.572 and 88.363, which are the coordinates of Kolkata, India)
+
+                          (The maximum distance in meters- refers to the radius from your location),
+
+                          The program takes your given location and displays earthquakes within
+                          your inputted radius. When asked for, the input values must be decimals.
+
+
+@ magnitude-filter      # Earthquake size is a quantitative measure of the size of the earthquake at
+                          its source. The Magnitude Scale measures the amount of seismic energy
+                          released by an earthquake. Enter the minimum and maximum magnitudes to get
+                          list of earthquakes within that range. When asked, the input values must
+                          be decimals.
+                          
 # Version
-1.2
+v1.3
 
 # Features
-1. **New Upload window:** Now select your text file from a window opener instead of specifying a path
-2. **Occurance of each word:** Choose between only to see the total number of words or also each word and the number of occurance
+1. **Real-time:** All data displayed are realtime and from the last 24 hours.
+2. **Filters:** Includes 4 different filters to personalize your result.
+3. **Accuracy:** The data provided to you are accurate as per international standards.
 
 # Installation
 This is a simple command line program and you must have jdk installed to use it
@@ -20,11 +60,7 @@ This is a simple command line program and you must have jdk installed to use it
 2. Clone the entire project into your pc or copy only the Executable folder to your desired location
 3. Head to the Executable folder
 6. Double click on the run.bat file
-7. Use the follwing commands...
-      1. $ **help**  # Opens the help menu  
-      2. $ **count-words**  # launch program and display the number of words  
-      3. $ **count-words-display**  # launch program and display the number of words along with words and their number of occuranceach word in the file  
-      4. $ **exit**  # Exit!  
+7. Use the commands from the command usages...
 8. Enjoy!
 
 # Usage
