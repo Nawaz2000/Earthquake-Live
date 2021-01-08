@@ -34,7 +34,7 @@ public class Main {
 			switch (choice) {
 			case "magnitude-filter":
 				Double minMag = null, maxMag = null;
-				System.out.println("Enter minimum magnitude: ");
+				System.out.println("\nEnter minimum magnitude: ");
 				if (scan.hasNextDouble()) {
 					minMag = scan.nextDouble();
 					scan.nextLine();
@@ -58,7 +58,7 @@ public class Main {
 				break;
 			case "depth-filter":
 				Integer minDepth = null, maxDepth = null;
-				System.out.println("Enter lower-bound depth in (-ve)meters: ");
+				System.out.println("\nEnter lower-bound depth in (-ve)meters: ");
 
 				if (scan.hasNextInt()) {
 					minDepth = scan.nextInt();
@@ -83,7 +83,7 @@ public class Main {
 				break;
 			case "location-filter":
 				Double latitude = null, longitude = null;
-				System.out.println("Enter latitude: ");
+				System.out.println("\nEnter latitude: ");
 
 				if (scan.hasNextDouble()) {
 					latitude = scan.nextDouble();
@@ -117,7 +117,7 @@ public class Main {
 				break;
 			case "minMag-filter":
 				Double minMagnitude = null;
-				System.out.println("Enter minimum magnitude: ");
+				System.out.println("\nEnter minimum magnitude: ");
 				if (scan.hasNextDouble()) {
 					minMagnitude = scan.nextDouble();
 					scan.nextLine();
@@ -138,7 +138,7 @@ public class Main {
 				obj.documentation();
 				break;
 			default:
-				System.out.println("Invalid input! Please Enter commands from the usage...");
+				System.out.println("\nInvalid input! Please Enter commands from the usage...");
 			}
 
 			System.out.println("\n\nEnter your choice: ");
