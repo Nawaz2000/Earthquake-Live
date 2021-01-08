@@ -11,13 +11,16 @@ import com.earthquake.pojos.QuakeEntry;
 
 public class Main {
 
-	public static void help() {
+	public static void welcomeMessage() {
 		System.out.println(
 				"\n-----------------------------------------------------------WELCOME TO EARTHQUAKE LIVE-----------------------------------------------------------");
 		System.out.println(
 				"----------------------------------------------------------------------v1.3----------------------------------------------------------------------");
 		System.out.println(
-				"-----------------------------------------------------Your personal earthquake reporter tool-----------------------------------------------------");
+				"------------------------------------------------Your personal real-time earthquake reporter tool------------------------------------------------");
+	}
+
+	public static void help() {
 		System.out.printf("Command Usages :-\n\n");
 		System.out.printf("$ help				# Opens the help menu\n");
 		System.out.printf(
@@ -59,7 +62,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-
+		welcomeMessage();
 		help();
 		terms();
 		Scanner scan = new Scanner(System.in);
